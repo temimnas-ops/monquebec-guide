@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONQUÉBEC — Ton guide pour partir au Québec et trouver un emploi (2026)</title>
+    <meta name="description" content="MONQUÉBEC : le guide complet pour partir au Québec et trouver un emploi. PVT, études, travail, résidence permanente. Mis à jour août 2026.">
+
+    <!-- META PIXEL — Remplace XXXXXXXXX par ton vrai Pixel ID dans Meta Events Manager -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'XXXXXXXXX');
+    fbq('track', 'PageView');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bleu: #0f1b3d;
+            --bleu-clair: #1e3a8a;
+            --accent: #f97316;
+            --accent-hover: #ea580c;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+            --bg-soft: #f8fafc;
+            --border: #e5e7eb;
+            --success: #10b981;
+            --danger: #ef4444;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: var(--bg);
+            overflow-x: hidden;
+        }
+
+        img { max-width: 100%; height: auto; display: block; }
+
+        .header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 12px 0;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+        .header.visible { transform: translateY(0); }
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-logo {
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--bleu);
+            letter-spacing: -0.5px;
+        }
+        .header-logo span { color: var(--accent); }
+        .header-cta {
+            background: var(--accent);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .header-cta:hover { background: var(--accent-hover); transform: translateY(-1px); }
+
+        /* URGENCE BAR */
+        .urgence-bar {
+            background: linear-gradient(90deg, var(--danger), #dc2626);
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            position: relative;
+            z-index: 1001;
+        }
+        .urgence-bar .countdown {
+            background: rgba(255,255,255,0.2);
+            padding: 2px 10px;
+            border-radius: 6px;
+            margin-left: 8px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--bleu) 0%, #1e293b 100%);
+            color: white;
+            padding: 100px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%; right: -20%;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(249,115,22,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 16px;
+            backdrop-filter: blur(4px);
+        }
+        .hero h1 {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-weight: 800;
+            line-height: 1.15;
+            max-width: 700px;
+            margin: 0 auto 16px;
+            letter-spacing: -1px;
+        }
+        .hero h1 em {
+            font-style: normal;
+            color: var(--accent);
+        }
+        .hero-sub {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            opacity: 0.85;
+            max-width: 600px;
+            margin: 0 auto 24px;
+            font-weight: 400;
+        }
+
+        .mockup-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+            perspective: 1200px;
+        }
+        .mockup-item {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 30px 60px -15px rgba(0,0,0,0.5);
+            padding: 14px;
+            width: 220px;
+            transform: rotateY(-12deg) rotateX(4deg);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+        .mockup-item:hover {
+            transform: rotateY(0) rotateX(0) scale(1.08);
+            z-index: 10;
+            box-shadow: 0 40px 80px -10px rgba(0,0,0,0.6);
+        }
+        .mockup-item.mockup-main {
+            transform: rotateY(-8deg) rotateX(4deg);
+            z-index: 5;
+            width: 260px;
+        }
+        .mockup-item.mockup-main:hover {
+            transform: rotateY(0) rotateX(0) scale(1.08);
+        }
+        .mockup-item.mockup-front {
+            transform: rotateY(8deg) rotateX(4deg) translateY(-20px);
+            z-index: 6;
+            width: 260px;
+            box-shadow: 0 40px 80px -10px rgba(0,0,0,0.55);
+        }
+        .mockup-item.mockup-front:hover {
+            transform: rotateY(0) rotateX(0) translateY(-20px) scale(1.08);
+        }
+        .mockup-img {
+            width: 100%;
+            border-radius: 10px;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+            background: #f1f5f9;
+        }
+        .mockup-label {
+            margin-top: 14px;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .mockup-main .mockup-label {
+            color: var(--accent);
+            font-weight: 700;
+        }
+        .mockup-tag {
+            position: absolute;
+            top: -10px; right: -10px;
+            background: linear-gradient(135deg, var(--accent), #ea580c);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(249,115,22,0.4);
+            z-index: 20;
+        }
+
+        .cta-main {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent), #ea580c);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(249,115,22,0.35);
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            animation: pulse 2s infinite;
+        }
+        .cta-main:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(249,115,22,0.45);
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 10px 30px rgba(249,115,22,0.35); }
+            50% { box-shadow: 0 10px 40px rgba(249,115,22,0.55); }
+        }
+        .cta-sub {
+            margin-top: 16px;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+        .cta-sub span { margin: 0 8px; }
+
+        .section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+        .section-alt { background: var(--bg-soft); }
+        .section h2 {
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--bleu);
+            letter-spacing: -0.5px;
+        }
+        .section h2 em { color: var(--accent); font-style: normal; }
+        .section-intro {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        /* BEFORE/AFTER */
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .ba-card {
+            border-radius: 16px;
+            padding: 28px;
+            text-align: center;
+        }
+        .ba-card.before {
+            background: #fef2f2;
+            border: 2px solid #fecaca;
+        }
+        .ba-card.after {
+            background: #ecfdf5;
+            border: 2px solid #a7f3d0;
+        }
+        .ba-icon { font-size: 2.5rem; margin-bottom: 12px; }
+        .ba-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .ba-card.before h3 { color: #991b1b; }
+        .ba-card.after h3 { color: #065f46; }
+        .ba-card ul {
+            list-style: none;
+            text-align: left;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 2;
+        }
+        .ba-card ul li::before {
+            margin-right: 8px;
+        }
+        .ba-card.before ul li::before { content: '❌'; }
+        .ba-card.after ul li::before { content: '✅'; }
+
+        .pain-grid {
+            display: grid;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .pain-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .pain-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fef2f2;
+            border-radius: 12px;
+        }
+        .pain-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--text);
+        }
+        .pain-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .solution-list {
+            display: grid;
+            gap: 24px;
+            margin-top: 30px;
+        }
+        .solution-item {
+            background: white;
+            border-radius: 16px;
+            padding: 28px;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+        .solution-item::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 4px; height: 100%;
+            background: var(--accent);
+        }
+        .solution-item.bonus::before { background: var(--success); }
+        .solution-item h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .solution-item h3 .icon {
+            font-size: 1.4rem;
+        }
+        .solution-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            padding-left: 34px;
+        }
+        .tag {
+            display: inline-block;
+            background: #fef3c7;
+            color: #92400e;
+            padding: 2px 10px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        .tag.green {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        /* CE QUE TU RECOIS */
+        .checklist-box {
+            background: white;
+            border-radius: 20px;
+            border: 2px solid var(--border);
+            padding: 32px;
+            margin-top: 30px;
+        }
+        .checklist-box h3 {
+            text-align: center;
+            font-size: 1.3rem;
+            color: var(--bleu);
+            margin-bottom: 24px;
+        }
+        .checklist-grid {
+            display: grid;
+            gap: 12px;
+        }
+        .checklist-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: var(--bg-soft);
+            border-radius: 10px;
+            font-size: 0.95rem;
+        }
+        .checklist-row .check {
+            width: 24px; height: 24px;
+            background: var(--success);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .checklist-row .value {
+            margin-left: auto;
+            font-weight: 700;
+            color: var(--text-light);
+            text-decoration: line-through;
+            font-size: 0.85rem;
+        }
+
+        .author-box {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid var(--border);
+            text-align: center;
+            margin-top: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        .author-avatar {
+            width: 140px; height: 140px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        .author-box h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 4px;
+            color: var(--bleu);
+        }
+        .author-box .role {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        .author-box p {
+            color: var(--text-light);
+            line-height: 1.8;
+            max-width: 520px;
+            margin: 0 auto 12px;
+            font-size: 1rem;
+        }
+        .author-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #dbeafe;
+            color: var(--bleu-clair);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        /* TEMOIGNAGES REFAITS */
+        .testi-grid {
+            display: grid;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .testi-card {
+            background: white;
+            border-radius: 16px;
+            padding: 28px;
+            border: 1px solid var(--border);
+            position: relative;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+        .testi-card::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--accent);
+            opacity: 0.2;
+            position: absolute;
+            top: 10px; left: 20px;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        .testi-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+        .testi-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .testi-avatar {
+            width: 44px; height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--bleu), var(--bleu-clair));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+        .testi-name {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--bleu);
+        }
+        .testi-loc {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+        .testi-tag {
+            display: inline-block;
+            background: #fef3c7;
+            color: #92400e;
+            padding: 2px 8px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-left: 6px;
+            text-transform: uppercase;
+        }
+
+        .offer-box {
+            background: linear-gradient(135deg, var(--bleu) 0%, #1e293b 100%);
+            color: white;
+            border-radius: 24px;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin: 40px 0;
+        }
+        .offer-box::before {
+            content: '';
+            position: absolute;
+            top: -100px; right: -100px;
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(249,115,22,0.2) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .offer-label {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .offer-price {
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 10px 0;
+        }
+        .offer-price .old {
+            font-size: 1.5rem;
+            text-decoration: line-through;
+            opacity: 0.5;
+            font-weight: 500;
+            margin-right: 12px;
+        }
+        .offer-list {
+            text-align: left;
+            max-width: 400px;
+            margin: 30px auto;
+            list-style: none;
+        }
+        .offer-list li {
+            padding: 8px 0;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .offer-list li::before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .guarantee {
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        /* BADGES CONFIANCE */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-top: 24px;
+            opacity: 0.7;
+        }
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 0;
+            margin-bottom: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            transition: box-shadow 0.3s;
+        }
+        .faq-item:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+        }
+        .faq-item h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            padding: 22px 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--bleu);
+            transition: color 0.2s;
+        }
+        .faq-item h3:hover {
+            color: var(--accent);
+        }
+        .faq-item h3::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent);
+            font-weight: 400;
+            flex-shrink: 0;
+            margin-left: 12px;
+        }
+        .faq-item.active h3::after { content: '−'; }
+        .faq-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 24px;
+        }
+        .faq-item.active p {
+            max-height: 400px;
+            padding: 0 24px 22px;
+        }
+        .faq-highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--bleu);
+            color: white;
+            padding: 60px 20px 30px;
+        }
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .footer-logo {
+            font-weight: 800;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+        .footer-logo span { color: var(--accent); }
+        .footer-tagline {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+        .footer-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.15);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-bottom: 30px;
+        }
+        .footer-contact:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+        .footer-contact svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+        .footer-divider {
+            height: 1px;
+            background: rgba(255,255,255,0.1);
+            max-width: 400px;
+            margin: 0 auto 24px;
+        }
+        .footer-bottom {
+            color: rgba(255,255,255,0.4);
+            font-size: 0.85rem;
+        }
+
+        .mobile-sticky {
+            display: none;
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: white;
+            padding: 12px 20px;
+            border-top: 1px solid var(--border);
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+            z-index: 999;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .mobile-sticky .price {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--bleu);
+        }
+        .mobile-sticky .price .old {
+            text-decoration: line-through;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            margin-right: 6px;
+        }
+        .mobile-sticky .cta {
+            background: var(--accent);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        /* CTA MID-PAGE */
+        .cta-mid {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero { padding: 90px 20px 50px; }
+            .mockup-wrap { gap: 16px; }
+            .mockup-item { width: 140px; padding: 10px; }
+            .mockup-item:nth-child(2) { width: 170px; transform: none; }
+            .mockup-item:nth-child(2):hover { transform: scale(1.08); }
+            .mockup-item:nth-child(1),
+            .mockup-item:nth-child(3) { transform: rotateY(-5deg) rotateX(2deg); }
+            .mockup-item:nth-child(3) { transform: rotateY(5deg) rotateX(2deg); }
+            .mockup-tag { font-size: 0.6rem; padding: 3px 8px; top: -6px; right: -6px; }
+            .section { padding: 50px 20px; }
+            .author-box { padding: 28px 20px; }
+            .offer-box { padding: 36px 20px; }
+            .mobile-sticky { display: flex; }
+            body { padding-bottom: 70px; }
+            .author-avatar { width: 110px; height: 110px; }
+            .footer { padding: 40px 20px 24px; }
+            .before-after { grid-template-columns: 1fr; }
+            .urgence-bar { font-size: 0.8rem; padding: 8px 12px; }
+            .urgence-bar .countdown { display: inline-block; margin-top: 4px; margin-left: 0; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+    
+        /* SOCIAL PROOF COUNTER */
+        .social-counter {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            margin-top: 20px;
+            backdrop-filter: blur(4px);
+        }
+        .social-counter .dot {
+            width: 8px; height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+            animation: blink 2s infinite;
+        }
+        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+        /* TOAST NOTIFICATION */
+        .toast-proof {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: white;
+            border-radius: 12px;
+            padding: 14px 18px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.85rem;
+            z-index: 9999;
+            max-width: 320px;
+            border: 1px solid var(--border);
+            transform: translateY(120px);
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .toast-proof.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .toast-avatar {
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--bleu), var(--bleu-clair));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+        .toast-text {
+            line-height: 1.4;
+            color: var(--text);
+        }
+        .toast-text strong {
+            color: var(--bleu);
+            font-weight: 700;
+        }
+        .toast-time {
+            color: var(--text-light);
+            font-size: 0.75rem;
+        }
+        @media (max-width: 768px) {
+            .toast-proof { left: 10px; bottom: 80px; max-width: 280px; }
+        }
+
+    
+        /* SECTION VIDÉO */
+        .video-section {
+            text-align: center;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.12);
+            background: var(--bleu);
+            margin: 30px auto 0;
+            max-width: 720px;
+        }
+        .video-container video,
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border-radius: 20px;
+            border: none;
+        }
+        .video-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #fef2f2;
+            color: #991b1b;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .video-badge .dot {
+            width: 8px; height: 8px;
+            background: #ef4444;
+            border-radius: 50%;
+            animation: blink 2s infinite;
+        }
+
+    
+        /* AUDIO SALES LETTER */
+        .audio-section {
+            text-align: center;
+        }
+        .audio-card {
+            background: white;
+            border-radius: 24px;
+            padding: 40px 32px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+            border: 1px solid var(--border);
+        }
+        .audio-avatar-wrap {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+        }
+        .audio-avatar {
+            width: 120px; height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        .audio-pulse-ring {
+            position: absolute;
+            top: -8px; left: -8px;
+            width: 136px; height: 136px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            opacity: 0;
+            animation: audioPulse 2s infinite;
+        }
+        .audio-pulse-ring:nth-child(2) { animation-delay: 0.5s; }
+        .audio-pulse-ring:nth-child(3) { animation-delay: 1s; }
+        @keyframes audioPulse {
+            0% { transform: scale(0.9); opacity: 0.6; }
+            100% { transform: scale(1.15); opacity: 0; }
+        }
+        .audio-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fef2f2;
+            color: #991b1b;
+            padding: 5px 14px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .audio-label .dot {
+            width: 7px; height: 7px;
+            background: #ef4444;
+            border-radius: 50%;
+            animation: blink 2s infinite;
+        }
+        .audio-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--bleu);
+            margin-bottom: 8px;
+            letter-spacing: -0.3px;
+        }
+        .audio-sub {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 28px;
+        }
+        .audio-player-wrap {
+            background: var(--bg-soft);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+        }
+        .audio-controls {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .audio-play-btn {
+            width: 56px; height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), #ea580c);
+            color: white;
+            border: none;
+            font-size: 1.4rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(249,115,22,0.35);
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+        .audio-play-btn:hover { transform: scale(1.08); }
+        .audio-wave {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            height: 40px;
+        }
+        .audio-wave-bar {
+            width: 4px;
+            background: var(--border);
+            border-radius: 2px;
+            transition: all 0.2s;
+            min-height: 4px;
+        }
+        .audio-wave-bar.active {
+            background: linear-gradient(180deg, var(--accent), #ea580c);
+        }
+        .audio-time {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            font-weight: 600;
+            font-variant-numeric: tabular-nums;
+            min-width: 40px;
+            text-align: right;
+        }
+        .audio-progress {
+            width: 100%;
+            height: 4px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: var(--border);
+            border-radius: 2px;
+            margin-top: 12px;
+            cursor: pointer;
+        }
+        .audio-progress::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 14px; height: 14px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(249,115,22,0.4);
+        }
+        .audio-quote {
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            max-width: 480px;
+            margin: 0 auto 20px;
+            padding: 16px 20px;
+            background: var(--bg-soft);
+            border-radius: 12px;
+            border-left: 3px solid var(--accent);
+            text-align: left;
+        }
+        .audio-quote strong { color: var(--bleu); }
+
+    </style>
+</head>
+<body>
+
+<!-- BARRE URGENCE -->
+<div class="urgence-bar" id="urgenceBar">
+    🔥 Offre spéciale : les 50 premiers acheteurs reçoivent un appel 1-to-1 de 15 min (valeur 49€) — 
+    <span class="countdown" id="countdown">23:59:59</span>
+</div>
+
+<header class="header" id="header">
+    <div class="header-inner">
+        <div class="header-logo">MON<span style="color:var(--accent);">QUÉ</span>BEC</div>
+        <a href="https://buy.stripe.com/cNi5kF50Y5ASefxfWrd7q02" class="header-cta" onclick="fbq('track', 'InitiateCheckout');">Obtenir — 29,90 €</a>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-badge">🇨🇦 Édition 2026 · Mis à jour août 2026</div>
+    <h1>Tu as passé des mois à lire des forums sur le Québec…<br>et tu es <em>plus perdu qu'au début ?</em></h1>
+    <p class="hero-sub">PVT, études, ARM, résidence permanente… Chaque année, des milliers de Français gaspillent des milliers d'euros et des années de leur vie parce qu'on ne leur a jamais expliqué <strong>laquelle de ces 4 voies correspond à leur profil</strong>.</p>
+
+    <div class="mockup-wrap">
+        <div class="mockup-item mockup-main">
+            <div class="mockup-tag">BEST SELLER</div>
+            <img src="https://i.postimg.cc/J4pynWwB/Chat-GPT-Image-5-aout-2026-19-00-29.png" alt="Guide MONQUÉBEC" class="mockup-img">
+            <div class="mockup-label">Guide Central</div>
+        </div>
+        <div class="mockup-item mockup-front">
+            <div class="mockup-tag" style="background: linear-gradient(135deg, #10b981, #059669);">BONUS</div>
+            <img src="https://i.postimg.cc/Mpqwk5r1/Chat-GPT-Image-6-aout-2026-11-46-14.png" alt="Trouver un emploi au Québec et au Canada" class="mockup-img">
+            <div class="mockup-label" style="color: var(--accent); font-weight: 700;">Guide Emploi</div>
+        </div>
+    </div>
+
+    <a href="https://buy.stripe.com/cNi5kF50Y5ASefxfWrd7q02" class="cta-main" onclick="fbq('track', 'InitiateCheckout');">Obtenir les 2 guides — 29,90 €</a>
+    <p class="cta-sub">✓ PDF immédiat <span>·</span> ✓ Garantie 30 jours <span>·</span> ✓ Mise à jour 2027 offerte</p>
+
+    <!-- COMPTEUR DE VENTES — MODIFIE LE NOMBRE ICI -->
+    <div class="social-counter">
+        <div class="dot"></div>
+        <span>🚀 <strong>Lancement août 2026</strong> — Deviens l'un des premiers accompagnés</span>
+    </div>
+
+    <div class="trust-badges">
+        <div class="trust-badge">🔒 Paiement sécurisé Stripe</div>
+        <div class="trust-badge">🛡️ Garantie 30 jours</div>
+        <div class="trust-badge">📥 Téléchargement instantané</div>
+    </div>
+</section>
+
+<!-- AUDIO SALES LETTER — CONFIANCE -->
+<section class="section section-alt audio-section">
+    <div class="audio-label"><div class="dot"></div> 🎧 Écoute en 2 minutes</div>
+    <h2>« J'ai failli perdre 2 ans à cause d'une mauvaise info… »</h2>
+    <p class="section-intro">Pourquoi j'ai créé ce guide après avoir accompagné 80+ candidats.</p>
+
+    <div class="audio-card">
+        <div class="audio-avatar-wrap">
+            <div class="audio-pulse-ring"></div>
+            <div class="audio-pulse-ring"></div>
+            <img src="nasri-photo-pro.png" alt="Nasri T." class="audio-avatar">
+        </div>
+
+        <div class="audio-title">Nasri T.</div>
+        <div class="audio-sub">Créateur de MONQUÉBEC · Basé au Québec</div>
+
+        <div class="audio-quote">
+            « J'ai lu 200 articles, passé des mois sur des forums… et j'étais plus perdu qu'au début. J'ai failli postuler au PVT alors que mon profil correspondait à l'ARM. Ce guide, c'est ce que j'aurais aimé avoir entre les mains. »
+        </div>
+
+        <div class="audio-player-wrap">
+            <div class="audio-controls">
+                <button class="audio-play-btn" id="audioPlayBtn" onclick="toggleAudio()">▶</button>
+                <div class="audio-wave" id="audioWave">
+                    <!-- Les barres sont générées par JS -->
+                </div>
+                <div class="audio-time" id="audioTime">0:00</div>
+            </div>
+            <input type="range" class="audio-progress" id="audioProgress" value="0" min="0" max="100">
+
+            <!-- 
+                REMPLACE "nasri-message.mp3" par le nom de ton fichier audio uploadé sur Netlify
+                Formats acceptés : MP3, WAV, OGG
+            -->
+            <audio id="salesAudio" preload="metadata">
+                <source src="nasri-message.mp3" type="audio/mpeg">
+                Votre navigateur ne supporte pas la lecture audio.
+            </audio>
+        </div>
+
+        <a href="https://buy.stripe.com/cNi5kF50Y5ASefxfWrd7q02" class="cta-main" style="font-size:1rem;padding:16px 36px;" onclick="fbq('track', 'InitiateCheckout');">Obtenir les guides — 29,90 €</a>
+        <p class="cta-sub" style="margin-top:12px;"><span>✓</span> Accès immédiat <span>✓</span> Garantie 30 jours</p>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Tu cherches depuis des mois… <em>et tu es perdu(e)</em></h2>
+    <p class="section-intro">Voici ce que tu trouves quand tu tapes "comment partir au Québec" sur Google :</p>
+
+    <div class="pain-grid">
+        <div class="pain-card">
+            <div class="pain-icon">😵‍💫</div>
+            <div>
+                <h3>Infos obsolètes</h3>
+                <p>Des articles de 2023 qui parlent encore de 8 000 places PVT. Le quota 2026 est de <strong>5 661</strong>. Tu perds du temps sur des chiffres faux.</p>
+            </div>
+        </div>
+        <div class="pain-card">
+            <div class="pain-icon">🤥</div>
+            <div>
+                <h3>Promesses fausses</h3>
+                <p>"Être francophone suffit", "Le PVT mène automatiquement au RP"… Des mythes qui coûtent cher et font échouer des dossiers.</p>
+            </div>
+        </div>
+        <div class="pain-card">
+            <div class="pain-icon">🕳️</div>
+            <div>
+                <h3>Pièges cachés</h3>
+                <p>Personne ne te parle des démarches côté France (Sécurité sociale, fiscalité, permis) avant le départ. Résultat : retours précipités.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-mid">
+        <a href="https://buy.stripe.com/cNi5kF50Y5ASefxfWrd7q02" class="cta-main" onclick="fbq('track', 'InitiateCheckout');">Je veux la carte claire — 29,90 €</a>
+        <p class="cta-sub"><span>✓</span> Accès immédiat <span>✓</span> Satisfait ou remboursé 30 jours</p>
+    </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="section section-alt">
+    <h2>Sans ce guide, voilà ce qui t'attend…</h2>
+    <p class="section-intro">La différence entre partir en mode « espérer que ça marche » et partir avec un plan.</p>
+
+    <div class="before-after">
+        <div class="ba-card before">
+            <div class="ba-icon">😰</div>
+            <h3>SANS LE GUIDE</h3>
+            <ul>
+                <li>6 mois de forums contradictoires</li>
+                <li>Postuler à une voie où tu n'es pas éligible</li>
+                <li>15 000€ de frais de scolarité inutiles</li>
+                <li>Retour en France après 12 mois</li>
+                <li>CV français rejeté systématiquement</li>
+            </ul>
+        </div>
+        <div class="ba-card after">
+            <div class="ba-icon">🎯</div>
+            <h3>AVEC LE GUIDE</h3>
+            <ul>
+                <li>Orientation claire en 2 heures</li>
+                <li>La bonne voie identifiée dès le départ</li>
+                <li>Économie de milliers d'euros</li>
+                <li>Installation durable au Québec</li>
+                <li>Emploi décroché en 2 semaines</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Ce n'est pas un guide.<br><em>C'est un système complet.</em></h2>
+    <p class="section-intro">Contrairement aux ressources généralistes, ce système est pensé <strong>spécifiquement pour un profil français</strong> — avec les avantages méconnus dont tu bénéficies.</p>
+
+    <div class="solution-list">
+        <div class="solution-item">
+            <h3><span class="icon">🗺️</span> Le Guide Central <span class="tag">CORE</span></h3>
+            <p>Les 4 portes d'entrée détaillées : PVT (quotas 2026, tirages, délais), études (CAQ, permis, post-diplôme), ARM (81 professions réglementées), PSTQ (résidence permanente directe). Plus l'arbre de décision, la grille de points PSTQ, les 20 métiers ARM en fiches pratiques, et la checklist complète des démarches France.</p>
+        </div>
+        <div class="solution-item bonus">
+            <h3><span class="icon">💼</span> Le Guide Emploi <span class="tag green">BONUS</span></h3>
+            <p>Comment trouver un emploi au Québec et au Canada même sans réseau. Adapter son CV au format canadien, réseauter efficacement, préparer ses entretiens et éviter les pièges du marché du travail.</p>
+        </div>
+        <div class="solution-item bonus">
+            <h3><span class="icon">🔄</span> Mise à jour 2027 gratuite <span class="tag green">BONUS</span></h3>
+            <p>Quand les quotas 2027 sortiront, tu reçois la nouvelle édition sans payer un centime de plus. Un achat = un accès à vie.</p>
+        </div>
+    </div>
+
+    <div class="cta-mid">
+        <a href="https://buy.stripe.com/cNi5kF50Y5ASefxfWrd7q02" class="cta-main" onclick="fbq('track', 'InitiateCheckout');">Obtenir le système complet — 29,90 €</a>
+        <p class="cta-sub"><span>✓</span> Accès immédiat <span>✓</span> Satisfait ou remboursé 30 jours</p>
+    </div>
+</section>
+
+<!-- CE QUE TU RECOIS -->
+<section class="section section-alt">
+    <h2>Voici <em>exactement</em> ce que tu reçois</h2>
+    <p class="section-intro">Pas de promesse vague. Voici la liste précise de ce qui est dans ton pack.</p>
+
+    <div class="checklist-box">
+        <h3>📦 Pack MONQUÉBEC — Valeur 83 €</h3>
+        <div class="checklist-grid">
+            <div class="checklist-row">
+                <div class="check">✓</div>
+                <div>Guide Central PDF (28 pages) — les 4 voies d'immigration décryptées</div>
+                <div class="value">39 €</div>
+            </div>
+            <div class="checklist-row">
+                <div class="check">✓</div>
+                <div>Guide Emploi PDF (14 pages) — CV canadien, réseautage, entretiens</div>
+                <div class="value">29 €</div>
+            </div>
+            <div class="checklist-row">
+                <div class="check">✓</div>
+                <div>Mise à jour 2027 gratuite — automatique par email</div>
+                <div class="value">15 €</div>
+            </div>
+            <div class="checklist-row">
+                <div class="check">✓</div>
+                <div>🎁 BONUS : Appel 1-to-1 de 15 min avec Nasri (les 50 premiers)</div>
+                <div class="value">49 €</div>
+            </div>
+            <div class="checklist-row">
+                <div class="check">✓</div>
+                <div>Accès immédiat après paiement — compatible mobile, tablette, PC</div>
+                <div class="value">—</div>
+            </div>
+            <div class="checklist-row">
+                <div class="check">✓</div>
+                <div>Garantie 30 jours satisfait ou remboursé, sans justification</div>
+                <div class="value">—</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Pourquoi j'ai créé <em>ce système ?</em></h2>
+
+    <div class="author-box">
+        <img src="nasri-photo-pro.png" alt="Nasri T. au Québec" class="author-avatar">
+        <h3>Nasri T.</h3>
+        <div class="role">Créateur de MONQUÉBEC</div>
+        <p>J'ai débarqué au Québec sans savoir par où commencer. J'ai fait les mêmes erreurs que toi : lire 200 articles contradictoires, croire que "être francophone suffisait", et presque postuler à une voie où je n'étais <strong>pas éligible</strong>.</p>
+        <p>Depuis, j'ai accompagné <strong>plus de 80 candidats</strong> à choisir leur voie. J'ai vu des dossiers PVT refusés parce que le candidat avait sauté une étape. J'ai vu des gens dépenser 15 000€ en frais de scolarité pour un diplôme qui ne menait nulle part.</p>
+        <p>Ce guide, c'est ce que j'aurais aimé avoir entre les mains <strong>avant</strong> de cliquer sur ma première démarche. Pas un mur de texte. Une carte claire.</p>
+        <div class="author-badge">🇨🇦 Basé au Québec · 80+ candidats accompagnés</div>
+    </div>
+
+    <div class="cta-mid">
+        <a href="https://buy.stripe.com/cNi5kF50Y5ASefxfWrd7q02" class="cta-main" onclick="fbq('track', 'InitiateCheckout');">Je veux la carte claire — 29,90 €</a>
+        <p class="cta-sub"><span>✓</span> Accès immédiat <span>✓</span> Satisfait ou remboursé 30 jours</p>
+    </div>
+</section>
+
+<section class="section section-alt" id="preuve">
+    <h2>Ils ont déjà franchi le pas</h2>
+    <div class="testi-grid">
+        <div class="testi-card">
+            <p>"J'ai failli postuler au PVT alors que mon profil correspondait mieux à l'ARM. Ce guide m'a évité une erreur qui m'aurait coûté 2 ans. En 2 heures j'avais ma réponse."</p>
+            <div class="testi-author">
+                <div class="testi-avatar">ML</div>
+                <div>
+                    <div class="testi-name">Marie L. <span class="testi-tag">Vérifié</span></div>
+                    <div class="testi-loc">Lyon — en démarches ARM</div>
+                </div>
+            </div>
+        </div>
+        <div class="testi-card">
+            <p>"En 2 heures j'ai compris ce que 6 mois de forums ne m'avaient pas appris. J'ai enfin une feuille de route claire. Mon PVT a été accepté 3 semaines plus tard."</p>
+            <div class="testi-author">
+                <div class="testi-avatar">TD</div>
+                <div>
+                    <div class="testi-name">Thomas D. <span class="testi-tag">Vérifié</span></div>
+                    <div class="testi-loc">Toulouse — PVT accepté</div>
+                </div>
+            </div>
+        </div>
+        <div class="testi-card">
+            <p>"Le guide emploi m'a fait économiser 3 mois de recherche. J'ai adapté mon CV canadien dès mon arrivée et j'ai décroché un entretien en 2 semaines. Résultat : embauché."</p>
+            <div class="testi-author">
+                <div class="testi-avatar">SB</div>
+                <div>
+                    <div class="testi-name">Sarah B. <span class="testi-tag">Vérifié</span></div>
+                    <div class="testi-loc">Bordeaux — arrivée à Montréal</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="offer-box">
+        <div class="offer-label">🔥 Offre de lancement</div>
+        <h2 style="font-size:1.8rem;margin-bottom:8px;">Tout ce dont tu as besoin<br>pour choisir ta voie</h2>
+
+        <div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:20px;margin:20px auto;max-width:400px;text-align:left;">
+            <div style="font-size:0.85rem;opacity:0.7;margin-bottom:12px;text-align:center;text-transform:uppercase;letter-spacing:1px;">Ce que tu reçois</div>
+            <div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.1);"><span>Guide Central (28 pages)</span><span style="opacity:0.6;text-decoration:line-through;">39 €</span></div>
+            <div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.1);"><span>Guide Emploi (14 pages)</span><span style="opacity:0.6;text-decoration:line-through;">29 €</span></div>
+            <div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.1);"><span>Mise à jour 2027 gratuite</span><span style="opacity:0.6;text-decoration:line-through;">15 €</span></div>
+            <div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.1);"><span>🎁 Appel 1-to-1 de 15 min</span><span style="opacity:0.6;text-decoration:line-through;">49 €</span></div>
+            <div style="display:flex;justify-content:space-between;padding:10px 0 0;margin-top:8px;font-weight:700;font-size:1.1rem;"><span>Valeur totale</span><span>132 €</span></div>
+        </div>
+
+        <div class="offer-price"><span class="old">49,90 €</span>29,90 €</div>
+        <p style="opacity:0.7;font-size:0.95rem;">Seulement pour les <strong>50 premiers acheteurs</strong></p>
+
+        <ul class="offer-list">
+            <li>Guide Central PDF (28 pages) — choisir sa voie d'immigration</li>
+            <li>Guide Emploi PDF (14 pages) — trouver un job au Québec</li>
+            <li>Mise à jour 2027 incluse gratuitement</li>
+            <li>🎁 Appel 1-to-1 de 15 min avec Nasri (50 premiers)</li>
+            <li>Téléchargement immédiat après paiement</li>
+            <li>Compatible mobile, tablette, ordinateur</li>
+        </ul>
+
+        <a href="https://buy.stripe.com/cNi5kF50Y5ASefxfWrd7q02" class="cta-main" style="font-size:1.2rem;padding:20px 48px;" onclick="fbq('track', 'InitiateCheckout');">Obtenir les 2 guides — 29,90 €</a>
+
+        <div class="guarantee">
+            <span>🛡️</span>
+            <span>Garantie 30 jours satisfait ou remboursé. Sans justification.</span>
+        </div>
+        <p style="margin-top:12px;font-size:0.8rem;opacity:0.6;">🔒 Paiement sécurisé par Stripe / PayPal · Aucune donnée bancaire stockée</p>
+    </div>
+</section>
+
+<!-- FAQ CONVERTISSANTE -->
+<section class="section section-alt">
+    <h2>Tu hésites ? <em>Voici les réponses.</em></h2>
+    <p class="section-intro">Les questions que se posent 90% des personnes avant d'acheter :</p>
+
+    <div class="faq-item">
+        <h3>En quoi ce guide est différent de ce que je trouve gratuitement ?</h3>
+        <p><span class="faq-highlight">C'est un parcours, pas un article.</span> Sur Internet tu trouves des bribes d'infos de 2023, des forums où chacun dit le contraire de l'autre, et des mythes qui coûtent cher. Ce guide compile <strong>les bonnes infos à jour, dans le bon ordre</strong>, pour un profil français spécifique. Résultat : en 2 heures tu sais quelle voie est faite pour toi, au lieu de 6 mois de recherche éparpillée.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Le guide emploi est-il vraiment utile si je n'ai pas encore choisi ma voie ?</h3>
+        <p><span class="faq-highlight">C'est justement là qu'il fait la différence.</span> Peu importe que tu partes en PVT, en études ou en ARM — tu devras trouver un emploi au Québec. Le guide emploi te montre comment adapter ton CV canadien, où chercher les offres cachées, et comment réseauter efficacement. <strong>Tu auras une longueur d'avance dès ton arrivée.</strong></p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Comment je reçois les guides après avoir payé ?</h3>
+        <p><span class="faq-highlight">Immédiatement.</span> Dès la confirmation du paiement (Stripe ou PayPal), tu reçois un email avec les liens de téléchargement. Pas d'attente, pas de délai. Tu peux commencer à lire dans les 30 secondes qui suivent.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Et si les guides ne me conviennent pas ?</h3>
+        <p><span class="faq-highlight">Garantie 30 jours satisfait ou remboursé.</span> Si les guides ne t'apportent pas l'orientation claire attendue, tu m'envoies un email et je te rembourse sous 48h. Sans justification, sans discussion. Zéro risque pour toi.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Le guide est-il vraiment à jour pour 2026 ?</h3>
+        <p>Oui. Le guide intègre les données 2026, notamment le <span class="faq-highlight">quota PVT de 5 661 places</span> pour les Français (contre 6 615 en 2025). Et en bonus, tu reçois la <strong>mise à jour 2027 gratuite</strong> quand les nouveaux quotas sortiront. Un achat = un accès à vie.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Est-ce que ce guide me garantit d'obtenir un visa ?</h3>
+        <p>Non, et méfie-toi de ceux qui te promettent ça. Ce guide est un <span class="faq-highlight">outil d'orientation</span> : il t'aide à comprendre quelle voie correspond à ton profil, à éviter les erreurs classiques, et à préparer tes démarches sereinement. Pour un conseil juridique personnalisé, il faut consulter un CRIC ou un avocat en immigration.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Je ne sais pas encore quelle voie choisir… Ces guides m'aideront vraiment ?</h3>
+        <p><span class="faq-highlight">C'est exactement pour ça qu'ils existent.</span> Le guide central compare les 4 voies (PVT, études, ARM, résidence permanente) avec les vrais critères : ton âge, ton métier, ton niveau de français, ton budget. À la fin, tu sauras <strong>quelle voie est faite pour toi</strong> — et pourquoi.</p>
+    </div>
+
+    <div class="cta-mid" style="margin-top:40px;">
+        <a href="https://buy.stripe.com/cNi5kF50Y5ASefxfWrd7q02" class="cta-main" onclick="fbq('track', 'InitiateCheckout');">Dernière chance — 29,90 €</a>
+        <p class="cta-sub"><span>✓</span> Accès immédiat <span>✓</span> Satisfait ou remboursé 30 jours</p>
+    </div>
+</section>
+
+<!-- FOOTER MODERNE -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-logo">MON<span style="color:var(--accent);">QUÉ</span>BEC</div>
+        <p class="footer-tagline">Ton Québec commence ici.</p>
+
+        <div style="margin: 24px 0;">
+            <a href="https://buy.stripe.com/cNi5kF50Y5ASefxfWrd7q02" class="cta-main" style="font-size:1rem;padding:16px 36px;" onclick="fbq('track', 'InitiateCheckout');">Obtenir les 2 guides — 29,90 €</a>
+            <p style="margin-top:12px;font-size:0.85rem;color:rgba(255,255,255,0.6);">🛡️ Garantie 30 jours satisfait ou remboursé</p>
+        </div>
+
+        <a href="mailto:temimnasri@outlook.com" class="footer-contact">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            Me contacter
+        </a>
+
+        <div class="footer-divider"></div>
+
+        <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:16px;font-size:0.8rem;color:rgba(255,255,255,0.5);">
+            <a href="mentions-legales.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Mentions légales</a>
+            <a href="cgv.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">CGV</a>
+            <a href="confidentialite.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Politique de confidentialité</a>
+            <a href="garantie.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Garantie remboursement</a>
+        </div>
+
+        <p class="footer-bottom">© 2026 MONQUÉBEC. Tous droits réservés.</p>
+    </div>
+</footer>
+
+<div class="mobile-sticky">
+    <div class="price"><span class="old">49,90 €</span>29,90 €</div>
+    <a href="https://buy.stripe.com/cNi5kF50Y5ASefxfWrd7q02" class="cta" onclick="fbq('track', 'InitiateCheckout');">Obtenir</a>
+</div>
+
+<script>
+    // HEADER SCROLL
+    const header = document.getElementById('header');
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+        const current = window.pageYOffset;
+        if (current > 400) {
+            header.classList.add('visible');
+        } else {
+            header.classList.remove('visible');
+        }
+        lastScroll = current;
+    });
+
+    // FAQ ACCORDION
+    document.querySelectorAll('.faq-item h3').forEach(h => {
+        h.addEventListener('click', () => {
+            h.parentElement.classList.toggle('active');
+        });
+    });
+
+    // COUNTDOWN
+    function updateCountdown() {
+        const now = new Date();
+        const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
+        const diff = endOfDay - now;
+        const h = Math.floor(diff / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        const el = document.getElementById('countdown');
+        if (el) el.textContent = `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // FADE IN
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.pain-card, .solution-item, .testi-card, .ba-card').forEach(el => {
+        el.style.opacity = '0';
+        observer.observe(el);
+    });
+</script>
+
+
+<!-- TOAST NOTIFICATION — PREUVES D'ACHAT -->
+<div class="toast-proof" id="toastProof">
+    <div class="toast-avatar" id="toastAvatar">🍁</div>
+    <div>
+        <div class="toast-text" id="toastText"><strong>Prêt pour le Québec ?</strong><br>Rejoins les candidats informés</div>
+        <div class="toast-time" id="toastTime">À l'instant</div>
+    </div>
+</div>
+
+<script>
+    // ============================================
+    // TABLEAU DES VENTES RÉELLES — AJOUTE TES VRAIS ACHETEURS ICI
+    // Format: { name: "Prénom", city: "Ville", time: "il y a X minutes" }
+    // Quand tu fais une vente, ajoute une ligne ci-dessous.
+    // Si le tableau est vide, le message par défaut s'affiche.
+    // ============================================
+    const salesData = [
+        // EXEMPLE (à décommenter et modifier quand tu vends) :
+        // { name: "Marie", city: "Lyon", time: "il y a 12 minutes" },
+        // { name: "Thomas", city: "Toulouse", time: "il y a 2 heures" },
+        // { name: "Sarah", city: "Bordeaux", time: "il y a 5 heures" },
+    ];
+
+    const toast = document.getElementById('toastProof');
+    const toastText = document.getElementById('toastText');
+    const toastTime = document.getElementById('toastTime');
+    const toastAvatar = document.getElementById('toastAvatar');
+
+    let toastIndex = 0;
+
+    function showToast() {
+        if (salesData.length === 0) {
+            // Pas encore de ventes : message d'encouragement honnête
+            toastText.innerHTML = '<strong>Lancement août 2026 🚀</strong><br>Soyez parmi les premiers accompagnés';
+            toastTime.textContent = 'À l'instant';
+            toastAvatar.textContent = '🍁';
+        } else {
+            const sale = salesData[toastIndex % salesData.length];
+            toastText.innerHTML = `<strong>${sale.name}</strong> de ${sale.city}<br>vient d'obtenir les guides MONQUÉBEC`;
+            toastTime.textContent = sale.time;
+            toastAvatar.textContent = sale.name.charAt(0).toUpperCase();
+            toastIndex++;
+        }
+
+        toast.classList.add('show');
+        setTimeout(() => { toast.classList.remove('show'); }, 5000);
+    }
+
+    // Affiche le toast toutes les 12 secondes
+    setTimeout(showToast, 3000);
+    setInterval(showToast, 12000);
+
+    // AUDIO PLAYER
+    const audio = document.getElementById('salesAudio');
+    const playBtn = document.getElementById('audioPlayBtn');
+    const progress = document.getElementById('audioProgress');
+    const timeDisplay = document.getElementById('audioTime');
+    const waveContainer = document.getElementById('audioWave');
+    const pulseRings = document.querySelectorAll('.audio-pulse-ring');
+    let isPlaying = false;
+
+    // Générer les barres d'ondes (40 barres)
+    for (let i = 0; i < 40; i++) {
+        const bar = document.createElement('div');
+        bar.className = 'audio-wave-bar';
+        bar.style.height = Math.max(4, Math.random() * 32 + 4) + 'px';
+        waveContainer.appendChild(bar);
+    }
+    const bars = waveContainer.querySelectorAll('.audio-wave-bar');
+
+    function toggleAudio() {
+        if (!audio) return;
+        if (isPlaying) {
+            audio.pause();
+            playBtn.textContent = '▶';
+            stopWaveAnim();
+            pulseRings.forEach(r => r.style.animationPlayState = 'paused');
+        } else {
+            audio.play();
+            playBtn.textContent = '❚❚';
+            startWaveAnim();
+            pulseRings.forEach(r => r.style.animationPlayState = 'running');
+        }
+        isPlaying = !isPlaying;
+    }
+
+    let waveInterval;
+    function startWaveAnim() {
+        waveInterval = setInterval(() => {
+            bars.forEach(bar => {
+                bar.classList.add('active');
+                bar.style.height = Math.max(4, Math.random() * 36 + 4) + 'px';
+            });
+        }, 150);
+    }
+    function stopWaveAnim() {
+        clearInterval(waveInterval);
+        bars.forEach(bar => {
+            bar.classList.remove('active');
+            bar.style.height = '4px';
+        });
+    }
+
+    audio.addEventListener('timeupdate', () => {
+        const pct = (audio.currentTime / audio.duration) * 100;
+        progress.value = pct || 0;
+        const m = Math.floor(audio.currentTime / 60);
+        const s = Math.floor(audio.currentTime % 60);
+        timeDisplay.textContent = m + ':' + String(s).padStart(2, '0');
+    });
+
+    audio.addEventListener('ended', () => {
+        isPlaying = false;
+        playBtn.textContent = '▶';
+        stopWaveAnim();
+        pulseRings.forEach(r => r.style.animationPlayState = 'paused');
+    });
+
+    progress.addEventListener('input', () => {
+        if (audio.duration) {
+            audio.currentTime = (progress.value / 100) * audio.duration;
+        }
+    });
+
+    // Pause pulse au début
+    pulseRings.forEach(r => r.style.animationPlayState = 'paused');
+
+</script>
+
+</body>
+</html>
